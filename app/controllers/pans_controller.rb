@@ -34,7 +34,7 @@ class PansController < ApplicationController
     if @pan.update(pan_params)
       redirect_to @pan
     else
-      render 'edit'
+      render 'editoi'
     end
   end
 

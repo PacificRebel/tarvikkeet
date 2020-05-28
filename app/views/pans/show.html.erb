@@ -1,12 +1,15 @@
+<center>
+
 <p>
-  <strong>Title:</strong>
+  <strong>Tarvike:</strong>
   <%= @pan.title %>
 </p>
 
 <p>
-  <strong>Text:</strong>
+  <strong>Hinta:</strong>
   <%= @pan.text %>
 </p>
 
-<%= link_to 'Editoi', edit_pan_path(@pan) %> |
+
+<%= link_to 'Editoi', edit_pan_path(@pan) %>
 <%= link_to 'Takaisin listaan', pans_path %>

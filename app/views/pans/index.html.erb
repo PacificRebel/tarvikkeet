@@ -1,12 +1,12 @@
-
+<center>
 <h1>Tarvikelista</h1>
 
 <%= link_to 'Lisää uusi tarvike', new_pan_path %>
 
 <table>
   <tr>
-    <th>Otsikko</th>
-    <th>Kuvaus</th>
+    <th>Tarvike</th>
+    <th>Hinta</th>
     <th></th>
   </tr>
 
@@ -14,6 +14,7 @@
     <tr>
       <td><%= pan.title %></td>
       <td><%= pan.text %></td>
+      <br>
       <td><%= link_to 'Näytä', pan_path(pan) %></td>
       <td><%= link_to 'Editoi', edit_pan_path(pan) %></td>
       <td><%= link_to 'Poista', pan_path(pan),

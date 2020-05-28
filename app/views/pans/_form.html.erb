@@ -15,17 +15,17 @@
   <% end %>
 
   <p>
-    <%= form.label :title %><br>
+    <%= form.label(:title, 'Tarvike') %><br>
     <%= form.text_field :title %>
   </p>
 
   <p>
-    <%= form.label :text %><br>
+    <%= form.label(:text, 'Hinta') %><br>
     <%= form.text_area :text %>
   </p>
 
   <p>
-    <%= form.submit %>
+    <%= form.submit 'Lisää listaan' %>
   </p>
 
 <% end %>
