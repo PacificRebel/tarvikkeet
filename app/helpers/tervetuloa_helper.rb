@@ -1,0 +1,2 @@
+module TervetuloaHelper
+end

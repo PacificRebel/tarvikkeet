@@ -1,0 +1,12 @@
+<p>
+  <strong>Title:</strong>
+  <%= @pan.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @pan.text %>
+</p>
+
+<%= link_to 'Editoi', edit_pan_path(@pan) %> |
+<%= link_to 'Takaisin listaan', pans_path %>
