@@ -4,7 +4,7 @@ class PansController < ApplicationController
 
   def index
       @pans = Pan.all
-    end
+  end
 
   def show
     @pan = Pan.find(params[:id])
@@ -22,7 +22,7 @@ class PansController < ApplicationController
     @pan = Pan.new(pan_params)
 
     if @pan.save
-    redirect_to @pan
+    redirect_to pans_path
     else
     render 'new'
     end
