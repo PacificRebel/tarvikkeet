@@ -1,9 +1,40 @@
 <center>
 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <img src="../kuja.jpeg" alt="Snow" style="width:100%;">
+  <div class="centered">
+
 <h1>Onnittelut ylioppilaalle!!</h1>
 <h2>Laita tähän tarvitsemasi keittiökamat (ruuanlaittotarvikkeita) <br>
   ja me maksetaan, yhteensä €150 verran!</h2>
 <%= link_to 'Tarvikelista', controller: 'pans' %>
 <br>
 <br>
-<img src="../kuja.jpeg" style="width:1411px;height:1058px;">
+<!-- <img src="../kuja.jpeg" style="width:1411px;height:1058px;"> -->
+</div>
+</div>
+</body>
