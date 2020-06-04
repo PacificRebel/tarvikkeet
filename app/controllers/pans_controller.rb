@@ -1,9 +1,10 @@
-class PansController < ApplicationController
+# frozen_string_literal: true
 
-  http_basic_authenticate_with name: "Viitasaari", password: "Nelostie", except: [:index, :show]
+class PansController < ApplicationController
+  http_basic_authenticate_with name: 'Viitasaari', password: 'Nelostie', except: %i[index show]
 
   def index
-      @pans = Pan.all
+    @pans = Pan.all
   end
 
   def show
@@ -22,9 +23,9 @@ class PansController < ApplicationController
     @pan = Pan.new(pan_params)
 
     if @pan.save
-    redirect_to pans_path
+      redirect_to pans_path
     else
-    render 'new'
+      render 'new'
     end
   end
 
@@ -38,14 +39,15 @@ class PansController < ApplicationController
     end
   end
 
-def destroy
+  def destroy
     @pan = Pan.find(params[:id])
     @pan.destroy
 
     redirect_to pans_path
-  end
+    end
 
-private
+  private
+
   def pan_params
     params.require(:pan).permit(:title, :text)
   end
