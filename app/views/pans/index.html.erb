@@ -1,31 +1,79 @@
 <center>
-<h1>Tarvikelista</h1>
 
-<%= link_to 'Lisää uusi tarvike', new_pan_path %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
 
-<table>
-  <tr>
-    <th>Tarvike</th>
-    <th>Hinta</th>
-    <th></th>
-  </tr>
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+/* This next section will apply the same styling to all links: */
+a:link, a:visited {
+  /* button colour (black) with transparency: */
+/* background-color: rgba(0, 0, 0, 0.3); */
+color: white;
+padding: 14px 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
 
-  <% @pans.each do |pan| %>
-    <tr>
-      <td><%= pan.title %></td>
-      <td><%= pan.text %></td>
+a:hover, a:active {
+  opacity: 0.5;
+}
 
-      <br>
-      <td><%= link_to 'Näytä', pan_path(pan) %></td>
-      <td><%= link_to 'Editoi', edit_pan_path(pan) %></td>
-      <td><%= link_to 'Poista', pan_path(pan),
-              method: :delete,
-              data: { confirm: 'Oletko varma?' } %></td>
-    </tr>
+</style>
+</head>
+<body>
 
-  <% end %>
+<div class="container">
+  <img src="../hedelmat.jpeg" alt="Snow" style="width:100%;">
+  <div class="centered">
 
-</table>
+    <h1>Tarvikelista</h1>
+
+    <%= link_to 'Lisää uusi tarvike', new_pan_path %>
+
+    <table>
+      <tr>
+        <th>Tarvike</th>
+        <th>Hinta</th>
+      </tr>
+      <% @pans.each do |pan| %>
+        <tr>
+          <td><%= pan.title %></td>
+          <td><%= pan.text %></td>
+
+          <td><%= link_to 'Näytä', pan_path(pan) %></td>
+          <td><%= link_to 'Editoi', edit_pan_path(pan) %></td>
+          <td><%= link_to 'Poista', pan_path(pan),
+                  method: :delete,
+                  data: { confirm: 'Oletko varma?' } %></td>
+
+        </tr>
+
+      <% end %>
+
+    </table>
+    <h3> Block here, adding text values together </h3>
 <br>
-<h3> Block here, adding text values together </h3>
-<%= link_to 'Takaisin kotisivulle', tervetuloa_index_path %>
+<br>
+<!-- <img src="../kuja.jpeg" style="width:1411px;height:1058px;"> -->
+</div>
+</div>
+</body>
+
+<%= link_to 'Takaisin kotisivulle', tervetuloa_index_path, style: "color: black;" %>
