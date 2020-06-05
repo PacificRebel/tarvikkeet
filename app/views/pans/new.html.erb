@@ -1,7 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+/* This next section will apply the same styling to all links: */
+a:link, a:visited {
+  /* button colour (black) with transparency: */
+/* background-color: rgba(0, 0, 0, 0.3); */
+color: white;
+padding: 14px 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
+
+a:hover, a:active {
+  opacity: 0.5;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="../kaulin.jpeg" alt="Snow" style="width:100%;">
+  <div class="centered">
+
+    <h1>Uusi tarvike listalle:</h1>
+
+    <%= render 'form' %>
+<%= link_to 'Takaisin kotisivulle', pans_path %>
+<br>
+<br>
+<!-- <img src="../kuja.jpeg" style="width:1411px;height:1058px;"> -->
+</div>
+</div>
+</body>
 <center>
-
-<h1>Uusi tarvike listalle:</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Takaisin', pans_path %>
