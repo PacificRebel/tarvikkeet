@@ -3,6 +3,15 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+  body {
+    background-image: url(../kaulin.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 .container {
   position: relative;
   text-align: center;
@@ -14,6 +23,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
@@ -37,18 +47,18 @@ a:hover, a:active {
 </head>
 <body>
 
-<div class="container">
-  <img src="../kaulin.jpeg" alt="Snow" style="width:100%;">
+<!-- <div class="container"> -->
+  <!-- <img src="../kaulin.jpeg" style="width:100%;"> -->
   <div class="centered">
 
     <h1>Uusi tarvike listalle:</h1>
 
     <%= render 'form' %>
-<%= link_to 'Takaisin kotisivulle', pans_path %>
+<%= link_to 'Takaisin listaan', pans_path %>
 <br>
 <br>
 <!-- <img src="../kuja.jpeg" style="width:1411px;height:1058px;"> -->
 </div>
-</div>
+<!-- </div> -->
 </body>
 <center>

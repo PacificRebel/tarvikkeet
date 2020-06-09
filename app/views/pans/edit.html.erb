@@ -1,5 +1,49 @@
 <center>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+    margin: 0;
+    font-family: Times;
+    font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+</style>
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+  <source src="/orava1.mp4" type="video/mp4">
+
+</video>
+
+<div class="centered">
 <h1>Editoi tarviketta</h1>
 <%= render 'form' %>
 
 <%= link_to 'Takaisin', pans_path %>
+</div>
+
+</body>
+</html>

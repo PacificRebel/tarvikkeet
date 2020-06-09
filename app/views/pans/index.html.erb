@@ -5,6 +5,19 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+body {
+  background-image: url(../banaanit.jpeg);
+  /* colour was for when I was testing why background image wasn't working */
+  /* background-color: #00FFFF; */
+  /* size was before I figured out that 'cover' works */
+  /* background-size: 1411px 1058px; */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
   position: relative;
   text-align: center;
@@ -16,6 +29,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
@@ -39,10 +53,10 @@ a:hover, a:active {
 </head>
 <body>
 
-<div class="container">
-  <img src="../hedelmat.jpeg" alt="Snow" style="width:100%;">
+<!-- <img src="../banaanit.jpeg" style="width:100%;"> -->
   <div class="centered">
-
+<br>
+<br>
     <h1>Tarvikelista</h1>
 
     <%= link_to 'Lisää uusi tarvike', new_pan_path %>
@@ -69,11 +83,11 @@ a:hover, a:active {
 
     </table>
     <h3> Block here, adding text values together </h3>
+
+    <%= link_to 'Takaisin kotisivulle', tervetuloa_index_path, style: "color: black;" %>
+
 <br>
 <br>
 <!-- <img src="../kuja.jpeg" style="width:1411px;height:1058px;"> -->
 </div>
-</div>
 </body>
-
-<%= link_to 'Takaisin kotisivulle', tervetuloa_index_path, style: "color: black;" %>
