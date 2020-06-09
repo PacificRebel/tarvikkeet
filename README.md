@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A mainly frontend Rails project in which I aim to utilise my TV production  
+experience to practice beautiful scrollytelling pages.  
+Built on a simple Rails CRUD scaffold with HTML and CSS for styling.
