@@ -1,6 +1,53 @@
 <center>
 
-<p>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+    margin: 0;
+    font-family: Times;
+    font-size: 25px;
+}
+
+a:link, a:visited {
+background-color: Transparent;
+color: white;
+padding: 14px 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
+
+#thisVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+</style>
+</head>
+<body>
+  <video autoplay muted loop id="thisVideo">
+    <source src="/pulut1.mp4" type="video/mp4">
+
+</video>
+
+<div class="centered">
+  <p>
   <strong>Tarvike:</strong>
   <%= @pan.title %>
 </p>
@@ -11,5 +58,8 @@
 </p>
 
 
-<%= link_to 'Editoi', edit_pan_path(@pan) %>
+<%= link_to 'Editoi', edit_pan_path(@pan) %> <br>
 <%= link_to 'Takaisin listaan', pans_path %>
+
+</body>
+</html>

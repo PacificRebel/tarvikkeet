@@ -33,7 +33,7 @@ class PansController < ApplicationController
     @pan = Pan.find(params[:id])
 
     if @pan.update(pan_params)
-      redirect_to @pan
+      redirect_to pans_path
     else
       render 'editoi'
     end
