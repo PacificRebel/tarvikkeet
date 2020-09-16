@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PansController < ApplicationController
-  http_basic_authenticate_with name: 'Viitasaari', password: 'Nelostie', except: %i[index show]
+  # http_basic_authenticate_with name: 'Viitasaari', password: 'Nelostie', except: %i[index show]
 
   def index
     @pans = Pan.all
