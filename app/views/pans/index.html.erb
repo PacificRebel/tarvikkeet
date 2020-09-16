@@ -66,7 +66,7 @@ a:hover, a:active {
         <th>Tarvike</th>
         <th>Hinta</th>
       </tr>
-      <% @pans.all.each do |pan| %>
+      <% @pans.each do |pan| %>
         <tr>
           <td><%= pan.title %></td>
           <td><%= pan.text %></td>
